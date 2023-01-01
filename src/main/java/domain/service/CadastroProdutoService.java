@@ -40,7 +40,7 @@ public class CadastroProdutoService {
             produtoRepository.flush();
 
         } catch (EmptyResultDataAccessException e) {
-            throw new CategoriaNaoEncontradaException(produtoId);
+            throw new ProdutoNaoEncontradoException(produtoId);
 
         } catch (DataIntegrityViolationException e) {
             throw new EntidadeEmUsoException(
