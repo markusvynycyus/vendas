@@ -59,6 +59,20 @@ public class VendedorController {
     }
 
 
+    @PutMapping("/{vendedorId }")
+    public VendedorDTO atualizar(@PathVariable Long vendedorId,
+                                @RequestBody @Valid VendedorInput vendedorInput) {
+        Vendedor vendedorAtual = cadastroVendedorService.buscarOuFalhar(vendedorId);
+        vendedorInputDisassembler.copyToDomainObject(vendedorInput, vendedorAtual);
+        vendedorAtual = cadastroVendedorService.salvar(vendedorAtual);
 
+        return vendedorModelAssembler.toModel(vendedorAtual);
+    }
+
+    @DeleteMapping("/{vendedorId}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void remover(@PathVariable Long vendedorId) {
+        cadastroVendedorService.excluir(vendedorId);
+    }
 
 }
