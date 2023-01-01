@@ -41,7 +41,7 @@ public class CadastroVendedorService {
             vendedorRepository.flush();
 
         } catch (EmptyResultDataAccessException e) {
-            throw new VendedorNaoEncontradaException(vendedorId);
+            throw new VendedorNaoEncontradoException(vendedorId);
 
         } catch (DataIntegrityViolationException e) {
             throw new EntidadeEmUsoException(
