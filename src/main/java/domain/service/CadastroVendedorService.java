@@ -1,6 +1,7 @@
 package domain.service;
 
 import domain.exception.CategoriaNaoEncontradaException;
+import domain.exception.VendedorNaoEncontradoException;
 import domain.model.Categoria;
 import domain.model.Vendedor;
 import domain.repository.CategoriaRepository;
