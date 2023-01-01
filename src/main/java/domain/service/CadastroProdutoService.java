@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class CadastroProdutoService {
 
-    private static final String MSG_EXAME_PRATICO_EM_USO
+    private static final String MSG_PRODUTO_EM_USO
             = "Produto  de código %d não pode ser removido,está em uso";
 
     @Autowired
