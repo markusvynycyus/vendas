@@ -3,11 +3,16 @@ package api.controller;
 
 import api.assembler.ProdutoInputDisassembler;
 import api.assembler.ProdutoModelAssembler;
+import api.assembler.VendedorInputDisassembler;
 import api.assembler.VendedorModelAssembler;
 import api.dto.CategoriaDTO;
+import api.dto.ProdutoDTO;
 import api.dto.VendedorDTO;
 import api.dto.input.CategoriaInput;
+import api.dto.input.ProdutoInput;
+import api.dto.input.VendedorInput;
 import domain.model.Categoria;
+import domain.model.Produto;
 import domain.model.Vendedor;
 import domain.repository.ProdutoRepository;
 import domain.repository.VendedorRepository;
@@ -46,12 +51,13 @@ public class VendedorController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public CategoriaDTO adicionar(@RequestBody @Valid VendedorInput vendedorInput) {
-        Categoria categoria = vendedorInputDisassembler.toDomainObject(vendedorInput);
-        categoria = cadastroVendedorService.salvar(categoria);
+    public VendedorDTO adicionar(@RequestBody @Valid VendedorInput vendedorInput) {
+        Vendedor vendedor = vendedorInputDisassembler.toDomainObject(vendedorInput);
+        vendedor = cadastroVendedorService.salvar(vendedor);
 
-        return vendedorModelAssembler.toModel(categoria);
+        return vendedorModelAssembler.toModel(vendedor);
     }
+
 
 
 
