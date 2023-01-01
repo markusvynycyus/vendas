@@ -3,6 +3,7 @@ package api.controller;
 
 import api.assembler.ProdutoInputDisassembler;
 import api.assembler.ProdutoModelAssembler;
+import api.assembler.VendedorModelAssembler;
 import api.dto.CategoriaDTO;
 import api.dto.VendedorDTO;
 import api.dto.input.CategoriaInput;
