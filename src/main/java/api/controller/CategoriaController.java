@@ -58,8 +58,8 @@ public class CategoriaController {
 
     @DeleteMapping("/{categoriaId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void remover(@PathVariable Long cozinhaId) {
-        cadastroCategoriaService.excluir(cozinhaId);
+    public void remover(@PathVariable Long categoriaId) {
+        cadastroCategoriaService.excluir(categoriaId);
     }
 
 
