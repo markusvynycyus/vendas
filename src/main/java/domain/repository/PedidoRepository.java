@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface VendaRepository extends JpaRepository<Pedido,Long> {
+public interface PedidoRepository extends JpaRepository<Pedido,Long> {
 
     Optional<Pedido> findByCodigo(String codigo);
 

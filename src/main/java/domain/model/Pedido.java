@@ -26,7 +26,7 @@ public class Pedido {
         private BigDecimal valorTotal;
 
         @CreationTimestamp
-        private OffsetDateTime dataVenda;
+        private OffsetDateTime dataPedido;
 
 
         @ManyToOne

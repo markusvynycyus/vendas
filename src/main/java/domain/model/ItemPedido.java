@@ -24,7 +24,7 @@ public class ItemPedido {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Pedido venda;
+    private Pedido pedido;
 
     @ManyToOne
     @JoinColumn(nullable = false)
