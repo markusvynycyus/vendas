@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 @Entity
-public class ItemVenda {
+public class ItemPedido {
 
     @EqualsAndHashCode.Include
     @Id
@@ -24,7 +24,7 @@ public class ItemVenda {
 
     @ManyToOne
     @JoinColumn(nullable = false)
-    private Venda venda;
+    private Pedido venda;
 
     @ManyToOne
     @JoinColumn(nullable = false)

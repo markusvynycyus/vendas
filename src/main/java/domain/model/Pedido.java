@@ -13,7 +13,7 @@ import java.util.List;
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true, callSuper = false)
 @Entity
-public class Venda {
+public class Pedido {
 
         @EqualsAndHashCode.Include
         @Id
@@ -35,10 +35,10 @@ public class Venda {
 
 
         @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
-        private List<ItemVenda> itens = new ArrayList<>();
+        private List<ItemPedido> itens = new ArrayList<>();
 
         public void calcularValorTotal() {
-                getItens().forEach(ItemVenda::calcularPrecoTotal);
+                getItens().forEach(ItemPedido::calcularPrecoTotal);
 
                 this.subtotal = getItens().stream()
                         .map(item -> item.getPrecoTotal())
