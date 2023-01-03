@@ -1,19 +1,20 @@
 package api.assembler;
 
-import api.dto.input.CategoriaInput;
+import api.dto.input.UsuarioComSenhaInput;
 import api.dto.input.UsuarioInput;
-import domain.model.Categoria;
 import domain.model.Usuario;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import javax.validation.Valid;
 
 @Component
 public class UsuarioInputDisassembler {
     @Autowired
     private ModelMapper modelMapper;
 
-    public Usuario toDomainObject(UsuarioInput usuarioInput) {
+    public Usuario toDomainObject(@Valid UsuarioComSenhaInput usuarioInput) {
         return modelMapper.map(usuarioInput, Usuario.class);
     }
 

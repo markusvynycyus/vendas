@@ -1,8 +1,6 @@
 package api.assembler;
 
-import api.dto.ProdutoDTO;
 import api.dto.UsuarioDTO;
-import domain.model.Produto;
 import domain.model.Usuario;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

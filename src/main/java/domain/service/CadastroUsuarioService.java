@@ -2,7 +2,6 @@ package domain.service;
 
 import domain.exception.UsuarioNaoEncontradoException;
 import domain.model.Usuario;
-import domain.model.Vendedor;
 import domain.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

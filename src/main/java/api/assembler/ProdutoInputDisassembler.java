@@ -1,8 +1,6 @@
 package api.assembler;
 
-import api.dto.input.CategoriaInput;
 import api.dto.input.ProdutoInput;
-import domain.model.Categoria;
 import domain.model.Produto;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;

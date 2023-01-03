@@ -1,19 +1,12 @@
 package api.controller;
 
 
-import api.assembler.CategoriaInputDisassembler;
-import api.assembler.CategoriaModelAssembler;
 import api.assembler.ProdutoInputDisassembler;
 import api.assembler.ProdutoModelAssembler;
-import api.dto.CategoriaDTO;
 import api.dto.ProdutoDTO;
-import api.dto.input.CategoriaInput;
 import api.dto.input.ProdutoInput;
-import domain.model.Categoria;
 import domain.model.Produto;
-import domain.repository.CategoriaRepository;
 import domain.repository.ProdutoRepository;
-import domain.service.CadastroCategoriaService;
 import domain.service.CadastroProdutoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
