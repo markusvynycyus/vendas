@@ -1,6 +1,7 @@
 package api.assembler;
 
 import api.dto.input.CategoriaInput;
+import api.dto.input.UsuarioInput;
 import domain.model.Categoria;
 import domain.model.Usuario;
 import org.modelmapper.ModelMapper;

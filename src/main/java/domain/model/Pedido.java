@@ -37,7 +37,7 @@ public class Pedido {
         @JoinColumn(name = "usuario_cliente_id", nullable = false)
         private Usuario cliente;
 
-        @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
+        @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
         private List<ItemPedido> itens = new ArrayList<>();
 
         public void calcularValorTotal() {

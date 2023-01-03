@@ -13,6 +13,8 @@ public class ProdutoDTO {
     private String nome;
     private String descricao;
     private BigDecimal preco;
-    private Boolean ativo;
+//    private Boolean ativo;
 
 }
+
+
