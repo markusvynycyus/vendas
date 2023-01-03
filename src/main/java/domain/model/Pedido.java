@@ -33,6 +33,9 @@ public class Pedido {
         @JoinColumn(nullable = false)
         private Vendedor vendedor;
 
+        @ManyToOne
+        @JoinColumn(name = "usuario_cliente_id", nullable = false)
+        private Usuario cliente;
 
         @OneToMany(mappedBy = "venda", cascade = CascadeType.ALL)
         private List<ItemPedido> itens = new ArrayList<>();

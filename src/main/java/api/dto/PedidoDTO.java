@@ -23,5 +23,7 @@ public class PedidoDTO {
     private OffsetDateTime dataPedido;
 
     private VendedorDTO vendedorDTO;
+    private UsuarioDTO cliente;
+
     private List<ItemPedidoDTO> itens;
 }

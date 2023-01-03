@@ -7,6 +7,8 @@ import domain.model.Pedido;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,4 +29,9 @@ public class PedidoModelAssembler {
                 .map(pedido -> toModel(pedido))
                 .collect(Collectors.toList());
     }
+
+
+
+
+
 }
