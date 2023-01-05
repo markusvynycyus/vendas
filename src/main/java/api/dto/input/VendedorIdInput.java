@@ -11,4 +11,5 @@ public class VendedorIdInput {
 
     @NotNull
     private Long id;
+
 }
